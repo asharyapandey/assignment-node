@@ -10,6 +10,7 @@ export default {
         categoryEditError: "Category could not be edited.",
         categoryDeleted: "Category has been deleted.",
         categoryDeleteError: "Category could not be deleted.",
+        validation: (field: string) => `${field} is required.`,
     },
     company: {
         companiesFetched: "Companies have been fetched.",
@@ -24,5 +25,6 @@ export default {
         companyDeleteError: "Company could not be deleted.",
         companyNotFound:
             "Company that your trying to perform action on is not available.",
+        validation: (field: string) => `${field} is required.`,
     },
 };

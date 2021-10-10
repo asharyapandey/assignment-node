@@ -13,11 +13,17 @@ import {
     getCategory,
     getSingleCategory,
 } from "../controllers/category.controllers";
+import { checkCategoryBody } from "../middlewares/category.middlewares";
 import { checkAPIKey } from "../middlewares/middleware";
 
 const categoryRoutes = express.Router();
 
-categoryRoutes.post(ADD_CATEGORY_ROUTE, checkAPIKey, addCategory);
+categoryRoutes.post(
+    ADD_CATEGORY_ROUTE,
+    checkAPIKey,
+    checkCategoryBody,
+    addCategory
+);
 categoryRoutes.get(GET_CATEGORY_ROUTE, checkAPIKey, getCategory);
 categoryRoutes.get(GET_SINGLE_CATEGORY_ROUTE, checkAPIKey, getSingleCategory);
 categoryRoutes.put(EDIT_CATEGORY_ROUTE, checkAPIKey, editCategory);

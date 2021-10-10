@@ -446,7 +446,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:7000/api/company?page=1&sendCategoryDetails=NO",
+							"raw": "http://localhost:7000/api/company?page=2&sendCategoryDetails=YES",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -459,11 +459,11 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "1"
+									"value": "2"
 								},
 								{
 									"key": "sendCategoryDetails",
-									"value": "NO",
+									"value": "YES",
 									"description": "YES || NO"
 								}
 							]

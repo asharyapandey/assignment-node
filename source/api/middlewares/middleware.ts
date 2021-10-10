@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { API_KEY } from "../constants/constants";
 import { BAD_REQUEST } from "../constants/status-codes.constants";
+
 export const checkAPIKey = (
     req: Request,
     res: Response,

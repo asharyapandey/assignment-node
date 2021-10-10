@@ -13,6 +13,7 @@ import {
     editCompany,
     deleteCompany,
 } from "../controllers/company.controllers";
+import { checkCompanyBody } from "../middlewares/company.middlewares";
 import { checkAPIKey } from "../middlewares/middleware";
 import { imageUpload } from "../middlewares/multer.middlewares";
 
@@ -22,6 +23,7 @@ companyRoutes.post(
     ADD_COMPANY_ROUTE,
     checkAPIKey,
     imageUpload.single("image"),
+    checkCompanyBody,
     addCompany
 );
 companyRoutes.get(GET_COMPANY_ROUTE, checkAPIKey, getCompanies);
